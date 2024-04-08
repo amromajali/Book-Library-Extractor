@@ -20,10 +20,60 @@ check_verified();
             <div class="d-flex align-items-center p-3 mt-5 mb-3 text-white-50 bg-purple rounded box-shadow">
                 <img class="mr-3" src="../assets/images/logonotextwhite.png" alt="" width="48" height="48">
                 <div class="lh-100">
-                    <h6 class="mb-0 text-white lh-100">Admin Dashboard</h6>
-                    <small>[Development in Progress]</small>
+                    <h6 class="mb-0 text-white lh-100">My Dashboard</h6>
+                    <small>My Books</small>
+
+                    
                 </div>
             </div>
+
+                                    
+<div class="container testimonials">
+    <div class="row">
+        <div class="col-md-4 testimonial">
+            <div class="row">
+                <div class="avatar col-md-5">
+                    <a href="#">
+                        <img class="img-circle" src="../assets/images/bookIcon.jpeg" alt="Taylor Otwell">
+                    </a>
+                </div>
+        
+                <div class="testimonial-main col-md-7">
+                    <h4 class="media-heading"><a href="#m">Owenl Ollyt</a></h4>
+                    <p class="testimony-body">bootstrap rules!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 testimonial">
+            <div class="row">
+                <div class="avatar col-md-5">
+                    <a href="#">
+                        <img class="img-circle" src="../assets/images/bookIcon.jpeg" alt="Taylor Otwell">
+                    </a>
+                </div>
+        
+                <div class="testimonial-main col-md-7">
+                    <h4 class="media-heading"><a href="#">Darla Marty</a></h4>
+                    <p class="testimony-body">Bootdey rules!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 testimonial">
+            <div class="row">
+                <div class="avatar col-md-5">
+                    <a href="#">
+                        <img class="img-circle" src="../assets/images/bookIcon.jpeg" alt="Taylor Otwell">
+                    </a>
+                </div>
+        
+                <div class="testimonial-main col-md-7">
+                    <h4 class="media-heading"><a href="#">Maryou Mcjouin</a></h4>
+                    <p class="testimony-body">Ok man!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                    
 
         </div>
     </div>
