@@ -65,9 +65,6 @@ check_verified();
 
 
 
-
-    <?php
-
-    include '../assets/layouts/footer.php'
-
-    ?>
+<div class="d-none">
+    <?php include '../assets/layouts/footer.php' ?>
+</div>

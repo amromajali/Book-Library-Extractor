@@ -45,8 +45,6 @@ check_logged_in_butnot_verified();
 </main>
 
 
-<?php
-
-include '../assets/layouts/footer.php'
-
-?>
+<div class="d-none">
+    <?php include '../assets/layouts/footer.php' ?>
+</div>

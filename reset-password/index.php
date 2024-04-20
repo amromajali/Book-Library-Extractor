@@ -65,14 +65,7 @@ check_logged_out();
                             Reset Password
                         </button>
 
-                        <p class="mt-4 mb-3 text-muted text-center">
-                            <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                                Login System
-                            </a> | 
-                            <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                                MIT License
-                            </a>
-                        </p>
+                       
 
                     </form>
 
@@ -113,14 +106,7 @@ check_logged_out();
                             Send Password Reset Link
                         </button>
 
-                        <p class="mt-4 mb-3 text-muted text-center">
-                            <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                                Login System
-                            </a> | 
-                            <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                                MIT License
-                            </a>
-                        </p>
+                       
 
                     </form>
 
@@ -136,8 +122,7 @@ check_logged_out();
 </div>
 
 
-<?php
 
-include '../assets/layouts/footer.php'
-
-?>
+<div class="d-none">
+    <?php include '../assets/layouts/footer.php' ?>
+</div>

@@ -151,11 +151,10 @@ check_logged_out();
 
 
 
-<?php
 
-include '../assets/layouts/footer.php'
-
-?>
+<div class="d-none">
+    <?php include '../assets/layouts/footer.php' ?>
+</div>
 
 <script type="text/javascript">
     function readURL(input) {

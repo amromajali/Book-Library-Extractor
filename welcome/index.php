@@ -27,10 +27,7 @@ include '../assets/layouts/header.php';
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta non adipisci impedit in totam doloremque aut, pariatur iure explicabo sunt dicta. Rerum vero maxime fuga commodi id quasi omnis!
                 </sub>
             </p>
-            <p>
-                <a href="#" class="btn btn-primary my-2" target="_blank">See Creator</a>
-                <a href="#" class="btn btn-secondary my-2" target="_blank">See Repository</a>
-            </p>
+            
         </div>
     </section>
 
@@ -43,51 +40,43 @@ include '../assets/layouts/header.php';
             </div>
         
             <div class="row">
-                <div class="col-md-4">
+                <?php
+                $query = "SELECT * FROM books WHERE book_status = 'Published'";
+                $stmt = mysqli_stmt_init($conn);
+
+                if (!mysqli_stmt_prepare($stmt, $query)) {
+                    die('ERROR IN CONNECTION');
+                } else {
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '
+                        <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src='../assets/images/repo_gitklik.png' alt="Card image cap">
+                        
                         <div class="card-body">
-                            <p class="card-text">Title</p>
+                            <p class="card-text">' . $row['book_name'] . '</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank">Download</a>
+                                    <a href="../book/showBook.php?id=' . $row['book_id'] . '" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+                                   
                                 </div>
-                                <small class="text-muted">[Title]</small>
+                                <small class="text-muted"></small>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src='../assets/images/repo_klik.png' alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">Title</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank">Download</a>
-                                </div>
-                                <small class="text-muted">[Title]</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src='../assets/images/repo_loginsystem.png' alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">Title</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank">Download</a>
-                                </div>
-                                <small class="text-muted">[Title]</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        
+                        ';
+                    }
+                }
+                
+                
+                
+                ?>
+                
+           
 
             </div>
         </div>
@@ -96,8 +85,6 @@ include '../assets/layouts/header.php';
 </main>
 
 
-<?php
-
-include '../assets/layouts/footer.php'
-
-?>
+<div class="d-none">
+    <?php include '../assets/layouts/footer.php' ?>
+</div>

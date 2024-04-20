@@ -62,14 +62,7 @@ include '../assets/layouts/header.php';
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="contact-submit" value="contact-submit">Submit</button>
                 </div>
 
-                <p class="mt-4 mb-3 text-muted text-center">
-                    <a href="#" target="_blank">
-                        Login System
-                    </a> | 
-                    <a href="#"s target="_blank">
-                        MIT License
-                    </a>
-                </p>
+               
 
             </form>
 
@@ -80,8 +73,7 @@ include '../assets/layouts/header.php';
 
 
 
-<?php
 
-include '../assets/layouts/footer.php';
-
-?>
+<div class="d-none">
+    <?php include '../assets/layouts/footer.php' ?>
+</div>
