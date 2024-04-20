@@ -17,9 +17,7 @@ app.use((req, res, next) => {
     next();
 });
 
-const client = new ImageAnnotatorClient({
-    keyFilename: "./travco-412917-694a50abd5f5.json",
-});
+
 
 app.post('/', (req, res) => {
     const imageData = req.body.image;
